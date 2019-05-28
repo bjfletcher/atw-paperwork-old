@@ -1,0 +1,2 @@
+note that I use a modified version of pdffiller (search for BJF in index.js there) and also it has some vulnerabilities
+and also webpack-plugin-copy index.js replacing push's with add's to work with WebPack 4

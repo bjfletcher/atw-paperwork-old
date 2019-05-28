@@ -1,0 +1,128 @@
+body {
+    font-family: MetricWeb, sans-serif;
+    margin: 0;
+}
+
+.claim-form__header,
+.claim-form__footer {
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+
+.claim-form__footer {
+    margin-bottom: 0;
+}
+
+.claim-form__content {
+    margin: 0 auto;
+    max-width: 780px;
+    padding: 0 12px;
+}
+
+.o-forms {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.claim-form__heading {
+    padding-bottom: 5px;
+    border-bottom: 5px solid #0d7680;
+}
+
+.claim-form__reference-number {
+    text-transform: uppercase;
+}
+
+.claim-form__claim-week-other--is-hidden {
+    display: none;
+}
+
+.claim-form__journey-costs-explanation--is-hidden {
+    display: none;
+}
+
+.claim-form__sublist--is-hidden {
+    display: none;
+}
+
+.claim-form__sublist-heading {
+    background-color: #0d7680;
+    color: #ffffff;
+    padding: 5px 0;
+    margin-right: 3px;
+    margin-bottom: 15px;
+    padding-left: 8px;
+}
+
+.claim-form__hours-input {
+    width: calc(2.2ch + 18px);
+    margin-right: 12px;
+    float: left;
+}
+
+.claim-form__costs-input {
+    width: calc(4.2ch + 18px);
+    margin-right: 12px;
+    float: left;
+}
+
+.claim-form__fare-input {
+    width: calc(5.2ch + 18px);
+    margin-right: 12px;
+    float: left;
+}
+
+.claim-form__total-cost-input {
+    width: calc(6.2ch + 18px);
+}
+
+.claim-form__claim-detail-group .o-forms__text:first-of-type {
+    clear: left;
+}
+
+.claim-form__detail-list:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.claim-form__claim-week-detail--is-hidden {
+    display: none;
+}
+
+.claim-form__claim-week-detail--is-invisible {
+    visibility: hidden;
+}
+
+.claim-form__sublist {
+    float: left;
+}
+
+.claim-form__button {
+    -webkit-appearance: none;
+    background-color: #0d7680;
+    border-radius: 0;
+    border: 0;
+    box-sizing: border-box;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: MetricWeb, sans-serif;
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 31px;
+    margin: 0;
+    min-height: 47px;
+    min-width: 37px;
+    padding: 8px 18px;
+    text-decoration: none
+}
+
+.claim-form__select-month--is-hidden {
+    display: none;
+}
+
+.claim-form__select-week--is-hidden {
+    display: none;
+}

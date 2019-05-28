@@ -1,0 +1,27 @@
+service:
+  name: atw-paperwork 
+
+# Add the serverless-webpack plugin
+plugins:
+  - serverless-webpack
+  - serverless-apigw-binary
+  - serverless-apigwy-binary
+
+custom:
+  apigwBinary:
+    types:
+      - '*/*'
+
+provider:
+  name: aws
+  runtime: nodejs10.x
+
+functions:
+  makePdf:
+    handler: src/handler.makePdf
+    events:
+      - http:
+          path: make-pdf
+          method: post
+          cors: true
+          contentHandling: CONVERT_TO_BINARY

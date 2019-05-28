@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Access paperwork made accessible</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.ft.com/__origami/service/build/v2/bundles/css?modules=o-forms@^6.0.0,o-typography@^5.9.0">
+    <link rel="stylesheet" href="claim-form.css">
+    <script src="https://www.ft.com/__origami/service/build/v2/bundles/js?modules=o-forms@^6.0.0,o-typography@^5.9.0"></script>
+</head>
+
+<body>
+    <header class="claim-form__header o-typography-product-heading-level-7">Access paperwork made accessible</header>
+    <section class="claim-form__content">
+        <h1 class="o-typography-product-heading-level-1 claim-form__heading">Fill in your claim form</h1>
+        <noscript>
+            <p>You have JavaScript disabled, which means parts of this form will not work because it includes some dynamic sections.</p>
+        </noscript>
+        <p>This is an accessible version of the Access to Work claim forms. When you finish filling in your details, this service will put all your details into the actual form and return it to you as a PDF for you to print, sign and post. <strong>Privacy</strong>: the service does not keep any of your details. The filled-in PDF is deleted after it is downloaded to your device.</p>
+        <form method="POST" action="https://9qod8km0g8.execute-api.eu-west-1.amazonaws.com/prod/make-pdf" data-claim-form-form>
+            <div class="o-forms">
+                <label for="first-name" class="o-forms__label">First name</label>
+                <input id="first-name" class="o-forms__text" name="first-name" type="text" autofocus>
+            </div>
+            <div class="o-forms">
+                <label for="last-name" class="o-forms__label">Last name</label>
+                <input id="last-name" class="o-forms__text" name="last-name" type="text">
+            </div>
+            <div class="o-forms">
+                <label for="email" class="o-forms__label">Email address</label>
+                <input id="email" class="o-forms__text" name="email" type="email">
+            </div>
+            <div class="o-forms">
+                <label for="ref-no" class="o-forms__label">Reference number</label>
+                <input id="ref-no" class="o-forms__text claim-form__reference-number" name="ref-no" type="text">
+            </div>
+
+            <fieldset class="o-forms">
+                <legend class="o-forms__label">Claim period</legend>
+                <div class="o-forms__group o-forms__group--inline-together">
+                    <input type="radio" name="claim-period" value="daily" class="o-forms__radio-button" id="claim-period-weekly" checked="checked" data-claim-form-weekly-option>
+                    <label for="claim-period-weekly" class="o-forms__label">Weekly</label>
+                    <input type="radio" name="claim-period" value="weekly" class="o-forms__radio-button" id="claim-period-monthly" data-claim-form-monthly-option>
+                    <label for="claim-period-monthly" class="o-forms__label">Monthly</label>
+                </div>
+            </fieldset>
+
+            <div class="o-forms">
+                <input type="checkbox" name="weekend" class="o-forms__checkbox" id="sat-sun" data-claim-form-weekend>
+                <label for="sat-sun" class="o-forms__label" data-claim-form-weekend-label>Include Saturday and Sunday</label>
+            </div>
+
+            <fieldset class="o-forms" data-claim-form-week-selection>
+                <legend class="o-forms__label">Claim week</legend>
+                <div class="o-forms__group">
+                    <input type="radio" name="claim-week" class="o-forms__radio" id="claim-week-1" data-claim-week-input-a checked="checked">
+                    <label for="claim-week-1" class="o-forms__label" data-claim-week-label-a>Week 1</label>
+                    <input type="radio" name="claim-week" class="o-forms__radio" id="claim-week-2" data-claim-week-input-b>
+                    <label for="claim-week-2" class="o-forms__label" data-claim-week-label-b>Week 2</label>
+                    <input type="radio" name="claim-week" class="o-forms__radio" id="claim-week-3" data-claim-week-input-c>
+                    <label for="claim-week-3" class="o-forms__label" data-claim-week-label-c>Week 3</label>
+                    <input type="radio" name="claim-week" class="o-forms__radio" id="claim-week-4" data-claim-week-input-d>
+                    <label for="claim-week-4" class="o-forms__label" data-claim-week-label-d>Week 4</label>
+                </div>
+            </fieldset>
+
+            <fieldset class="o-forms claim-form__select-month--is-hidden" data-claim-form-month-selection>
+                <legend class="o-forms__label">Claim month</legend>
+                <div class="o-forms__group">
+                    <input type="radio" name="claim-month" class="o-forms__radio" id="claim-month-1" data-claim-month-input-a checked="checked">
+                    <label for="claim-month-1" class="o-forms__label" data-claim-month-label-a>Month 1</label>
+                    <input type="radio" name="claim-month" class="o-forms__radio" id="claim-month-2" data-claim-month-input-b>
+                    <label for="claim-month-2" class="o-forms__label" data-claim-month-label-b>Month 2</label>
+                    <input type="radio" name="claim-month" class="o-forms__radio" id="claim-month-3" data-claim-month-input-c>
+                    <label for="claim-month-3" class="o-forms__label" data-claim-month-label-c>Month 3</label>
+                    <input type="radio" name="claim-month" class="o-forms__radio" id="claim-month-4" data-claim-month-input-d>
+                    <label for="claim-month-4" class="o-forms__label" data-claim-month-label-d>Month 4</label>
+                </div>
+            </fieldset>
+
+            <input type="hidden" name="claim-from" data-claim-form-from>
+            <input type="hidden" name="claim-to" data-claim-form-to>
+
+            <fieldset class="o-forms">
+                <legend class="o-forms__label">Claim for</legend>
+                <div class="o-forms__group o-forms__group--inline-together">
+                    <input type="radio" name="claim-type" value="support" class="o-forms__radio-button" id="claim-type-support" checked="checked" data-claim-form-support-option>
+                    <label for="claim-type-support" class="o-forms__label">Support worker (DP222JP)</label>
+                    <input type="radio" name="claim-type" value="travel" class="o-forms__radio-button" id="claim-type-travel" data-claim-form-travel-option>
+                    <label for="claim-type-travel" class="o-forms__label">Travel (DP226JP)</label>
+                </div>
+            </fieldset>
+
+            <div data-claim-form-detail-list class="claim-form__detail-list"></div>
+            <div data-claim-form-sublist-template class="claim-form__sublist claim-form__sublist--is-hidden">
+                <div data-claim-form-sublist-heading class="claim-form__sublist-heading"></div>
+            </div>
+
+            <fieldset class="o-forms claim-form__claim-week-detail--is-hidden" data-claim-form-journey-detail>
+                <legend class="o-forms__label" data-claim-form-detail-date></legend>
+                <div class="o-forms__group claim-form__claim-detail-group">
+                    <label data-claim-form-detail-am-label aria-label="am cost" class="o-forms__label claim-form__fare-input" for="am-template">am cost</label>
+                    <label data-claim-form-detail-pm-label aria-label="pm cost" class="o-forms__label claim-form__fare-input" for="pm-template">pm cost</label>
+                    <input data-claim-form-detail-am-input type="text" class="o-forms__text claim-form__fare-input" id="am-template">
+                    <input data-claim-form-detail-pm-input type="text" class="o-forms__text claim-form__fare-input" id="pm-template">
+                </div>
+            </fieldset>
+
+            <fieldset class="o-forms claim-form__claim-week-detail--is-hidden" data-claim-form-detail>
+                <legend class="o-forms__label" data-claim-form-detail-date></legend>
+                <div class="o-forms__group claim-form__claim-detail-group">
+                    <label data-claim-form-detail-hours-label aria-label="Hours" class="o-forms__label claim-form__hours-input" for="hours-template">Hours</label>
+                    <label data-claim-form-detail-costs-label aria-label="Costs" class="o-forms__label claim-form__costs-input" for="costs-template">Cost</label>
+                    <input data-claim-form-detail-hours-input type="text" class="o-forms__text claim-form__hours-input" id="hours-template">
+                    <input data-claim-form-detail-costs-input type="text" class="o-forms__text claim-form__costs-input" id="costs-template">
+                </div>
+            </fieldset>
+
+            <!--div class="o-forms">
+                <label for="total-cost" class="o-forms__label">Total cost</label>
+                <input id="total-cost" class="o-forms__text claim-form__total-cost-input" name="total-cost" type="text">
+            </div-->
+
+            <div class="o-forms">
+                <label for="payment-to" class="o-forms__label">Payment to be made to</label>
+                <input id="payment-to" class="o-forms__text" name="payment-to" type="text">
+            </div>
+
+            <p>For the below, if you're employed, fill in your employer's details. If you're self-employed, fill in your support worker's details.</p>
+            <div class="o-forms">
+                <label for="name" class="o-forms__label">Name</label>
+                <input id="name" class="o-forms__text" name="name" type="text">
+            </div>
+            <div class="o-forms">
+                <label for="position" class="o-forms__label">Position</label>
+                <input id="position" class="o-forms__text" name="position" type="text">
+            </div>
+            <div class="o-forms">
+                <label for="address" class="o-forms__label">Company name &amp; address</label>
+                <textarea id="address" class="o-forms__textarea" name="address" cols="32" rows="4"></textarea>
+            </div>
+
+            <div class="o-forms">
+                <input type="checkbox" name="save" class="o-forms__checkbox" id="save" data-claim-form-save>
+                <label for="save" class="o-forms__label">Save form excluding week and month details on this device for next time</label>
+            </div>
+
+            <div class="o-forms">
+                <input type="submit" value="Make PDF" class="claim-form__button">
+            </div>
+        </form>
+        <p>Any feedback? Tweet <a href="https://twitter.com/bjfletcher">Ben</a>.</p>
+    </section>
+    <footer class="claim-form__footer o-typography-product-heading-level-7">&copy; Ben Fletcher 2019</footer>
+    <script src="claim-form.js"></script>
+</body>
+</html>
